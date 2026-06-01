@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+
+<body>
+  <div class="search">
+    <div class="input-search-container">
+      <input class="js-input-search type="text" placeholder="Which city do you want to know?">
+    </div>
+    <div class="search-button js-search-button">
+      <img src="/images/search.svg" width="40px" height="40px" alt="search">
+    </div>
+  </div>
+  <div class="data-container">
+    <div class="title">
+      <h2>Today’s Highlight</h2>
+      <h2>Your Data</h2>
+      <h2>Hourly forecast</h2>
+    </div>
+    <div class="data-container-box">
+      <h2>Today’s Highlight</h2>
+      <div class="box-data-show">
+        <div class="subjects">
+          <p>Feels like</p>
+          <p>Humidity</p>
+          <p>Sunrise</p>
+          <p>Sunset</p>
+          <p>Pressure</p>
+          <p>Wind</p>
+          <p>Visibility</p>
+          <p>Cloudiness</p>
+        </div>
+        <div class="values js-values">
+          <p>24°C</p>
+          <p>61%</p>
+          <p>5:18</p>
+          <p>6:44 PM</p>
+          <p>1015 hPa</p>
+          <p>7 km/h NE</p>
+          <p>10 KM</p>
+          <p>75 %</p>
+        </div>
+      </div>
+      <h2>Your Data</h2>
+      <div class="box-data-today">
+        <div class="js-icon">
+          <img src="/images/weatherLogo.svg" width="300" alt="">
+        </div>
+        <div class="city-name">
+          <h4 id="city-name">Tehran</h4>
+        </div>
+        <div class="info">
+          <h4 id="degerous">23.5°C</h4>
+          <h4 id="sky-status">Broken Clouds</h4>
+        </div>
+      </div>
+      <h2>Hourly forecast</h2>
+      <div class="box-data-hourly js-box-data-hourly">
+        <div class="box-hourly-data">
+          <div class="cloud-status-icon">
+            <img src="/images/weatherLogo.svg" width="100" alt="">
+          </div>
+          <div class="time-status">
+            <h2>13 : 00</h2>
+          </div>
+          <div class="degerous-status">
+            <h2>30°C</h2>
+          </div>
+        </div>
+        <div class="box-hourly-data">
+          <div class="cloud-status-icon">
+            <img src="/images/weatherLogo.svg" width="100" alt="">
+          </div>
+          <div class="time-status">
+            <h2>15 : 00</h2>
+          </div>
+          <div class="degerous-status">
+            <h2>-10°C</h2>
+          </div>
+        </div>
+        <div class="box-hourly-data">
+          <div class="cloud-status-icon">
+            <img src="/images/weatherLogo.svg" width="100" alt="">
+          </div>
+          <div class="time-status">
+            <h2>17 : 00</h2>
+          </div>
+          <div class="degerous-status">
+            <h2>22°C</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

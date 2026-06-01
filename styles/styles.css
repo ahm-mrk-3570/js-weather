@@ -1,0 +1,240 @@
+:root {
+  --primary-color1 : #3131FF;
+  --primary-color2 : #3131FF;
+  --primary-color3 : #7979FF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-width: 600px;
+  min-height: 100vh;
+  background-image: url(/images/back.jpg);
+  background-repeat: no-repeat;
+  background-size: fill;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.input-search-container {
+  min-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.input-search-container > input {
+  width: 100%;
+  height: 100%;
+  padding-block: 1.8rem;
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 2rem;
+  border-radius: 1.3rem;
+  padding-left: 1rem;
+  text-align: center;
+}
+
+.input-search-container > input::placeholder {
+  color: gray;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search-button {
+  padding-inline: 1.625rem;
+  padding-block: 1.5rem;
+  background-color: white;
+  margin-left: 1rem;
+  border-radius: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.data-container {
+  width: 85%;
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  column-gap: 1.5rem;
+}
+
+.title > h2 {
+  font-size: 1.8rem;
+}
+
+.data-container-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box-data-show {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 1.5rem;
+  justify-content: space-between;
+  min-height: 650px;
+  animation: animate-fade 1s ease-in forwards;
+}
+
+.subjects {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  text-align: start;
+}
+
+.values {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-around;
+  text-align: end;
+}
+
+.box-data-show p {
+  font-size: 2rem;
+}
+
+.box-data-today {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  min-height: 650px;
+  position: relative;
+  animation: animate-fade 1s ease-in forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.city-name > h4 {
+  font-size: 5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 3.5rem;
+}
+
+.info h4:first-child {
+  font-size: 3rem;
+}
+
+.info h4:last-child {
+  font-size: 2rem;
+}
+
+.box-data-hourly {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 650px;
+  padding-inline: 1rem;
+  animation: animate-fade 1s ease-in forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.box-hourly-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.015);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.data-container-box > h2 {
+  display: none;
+}
+
+.time-status > h2 {
+  font-size: 2rem;
+}
+
+.degerous-status {
+  padding: 2rem 1rem;
+  border-radius: 28px;
+  background-color: white;
+}
+
+.degerous-status > h2 {
+  font-size: 2rem;
+}
+
+@keyframes animate-fade {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
